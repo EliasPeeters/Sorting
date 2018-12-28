@@ -1,0 +1,110 @@
+unit UsefullProcedure;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Samples.Spin, types, Math;
+
+  procedure fillListbox(var Listbox: TListBox; InputArray: TArrayOfInt);
+  procedure fillArrayRandom(var InputArray: TArrayOfInt; MaxNum: Integer);
+  procedure fillArray(var InputArray: TArrayOfInt; Preset: String);
+  procedure FillSortingDropDown(var DropDown: TComboBox);
+  procedure FillPresetsDropDown(var DropDown: TComboBox);
+  procedure FillDiagramStyleDropDown(var DropDown: TComboBox);
+
+implementation
+
+uses MainUnit;
+
+procedure fillListbox(var Listbox: TListBox; InputArray: TArrayOfInt);
+var
+  I: Integer;
+begin
+  Listbox.Clear;
+  with Listbox.Items do
+  begin
+    for I := 0 to length(InputArray) do
+      Add(IntToStr(InputArray[i]));
+  end;
+end;
+
+procedure fillArrayRandom(var InputArray: TArrayOfInt; MaxNum: Integer);
+var
+  I: Integer;
+begin
+  for I := 0 to length(InputArray) do
+  begin
+    InputArray[i]:= Random(MaxNum);
+  end;
+end;
+
+procedure fillArray(var InputArray: TArrayOfInt; Preset: String);
+var
+  I: Integer;
+begin
+  setLength(InputArray, MainUnit.ArrayLength);
+  if Preset = 'Order' then
+  begin
+    for I := 0 to length(InputArray) do
+      InputArray[i] := i;
+    //EditMaxNum.Value:= EditArrayLength.Value;
+  end
+  else if Preset = 'Wrong Order' then
+  begin
+    for I := 0 to length(InputArray) do
+      InputArray[i] := length(InputArray)-i;
+  end
+  else if Preset = 'Random' then
+  begin
+    fillArrayRandom(InputArray, MainUnit.MaxNum);
+  end;
+end;
+
+procedure FillSortingDropDown(var DropDown: TComboBox);
+begin
+  with DropDown.Items do
+  begin
+    Add('--none--');
+    Add('UtilitySort');              //
+    Add('BogoSort');             //
+    Add('BubbleSort');           //
+    Add('GnomeSort');            //
+    //Add('Gravitysort');          //
+    Add('Insertionsort');        //
+    Add('MergeSort');
+    Add('QuickSort');
+    Add('QuickSort');
+    Add('RadixSort');
+    Add('SelectionSort');
+    Add('ShakerSort');
+    Add('Shellsort');
+    Add('SlowSort');
+    Add('SmoothSort');
+    Add('Stoogesort');
+    Add('SwapSort');
+    Add('TimSort');
+  end;
+end;
+
+procedure FillPresetsDropDown(var DropDown: TComboBox);
+begin
+  with DropDown.Items do
+  begin
+    Add('Random');
+    Add('Order');
+    Add('Wrong Order');
+  end;
+end;
+
+procedure FillDiagramStyleDropDown(var DropDown: TComboBox);
+begin
+  with DropDown.Items do
+  begin
+    Add('BarChart');
+    Add('Circle Chart');
+  end;
+end;
+
+end.

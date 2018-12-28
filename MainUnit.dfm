@@ -1,0 +1,213 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 548
+  ClientWidth = 838
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Diagram1: TImage
+    Left = 24
+    Top = 8
+    Width = 250
+    Height = 250
+  end
+  object Diagram2: TImage
+    Left = 296
+    Top = 8
+    Width = 250
+    Height = 250
+  end
+  object Diagram3: TImage
+    Left = 568
+    Top = 8
+    Width = 250
+    Height = 250
+  end
+  object BtnCreateArray: TButton
+    Left = 24
+    Top = 486
+    Width = 250
+    Height = 25
+    Caption = 'Create Random Array'
+    TabOrder = 0
+    OnClick = BtnCreateArrayClick
+  end
+  object Diagram1Swaps: TPanel
+    Left = 24
+    Top = 272
+    Width = 250
+    Height = 25
+    Caption = '0'
+    TabOrder = 1
+  end
+  object Diagram2Swaps: TPanel
+    Left = 296
+    Top = 272
+    Width = 250
+    Height = 25
+    Caption = '0'
+    TabOrder = 2
+  end
+  object Diagram3Swaps: TPanel
+    Left = 568
+    Top = 272
+    Width = 250
+    Height = 25
+    Caption = '0'
+    TabOrder = 3
+  end
+  object Diagram1Access: TPanel
+    Left = 24
+    Top = 303
+    Width = 250
+    Height = 25
+    Caption = '0'
+    TabOrder = 4
+  end
+  object Diagram3Access: TPanel
+    Left = 568
+    Top = 303
+    Width = 250
+    Height = 25
+    Caption = '0'
+    TabOrder = 5
+  end
+  object Diagram2Access: TPanel
+    Left = 296
+    Top = 303
+    Width = 250
+    Height = 25
+    Caption = '0'
+    TabOrder = 6
+  end
+  object Diagram1Selector: TComboBox
+    Left = 24
+    Top = 334
+    Width = 250
+    Height = 21
+    AutoCompleteDelay = 100
+    DropDownCount = 30
+    TabOrder = 7
+    Text = 'ComboBox1'
+    OnChange = Diagram1SelectorChange
+  end
+  object Diagram2Selector: TComboBox
+    Left = 296
+    Top = 334
+    Width = 250
+    Height = 21
+    DropDownCount = 30
+    TabOrder = 8
+    Text = 'ComboBox1'
+    OnChange = Diagram2SelectorChange
+  end
+  object Diagram3Selector: TComboBox
+    Left = 568
+    Top = 334
+    Width = 250
+    Height = 21
+    DropDownCount = 30
+    TabOrder = 9
+    Text = 'ComboBox1'
+    OnChange = Diagram3SelectorChange
+  end
+  object EditMaxNum: TSpinEdit
+    Left = 26
+    Top = 431
+    Width = 121
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 10
+    Value = 0
+    OnChange = EditMaxNumChange
+  end
+  object EditArrayLength: TSpinEdit
+    Left = 153
+    Top = 431
+    Width = 121
+    Height = 22
+    MaxValue = 50
+    MinValue = 0
+    TabOrder = 11
+    Value = 0
+    OnChange = EditArrayLengthChange
+  end
+  object SelectorDiagramTyp: TComboBox
+    Left = 568
+    Top = 431
+    Width = 250
+    Height = 21
+    TabOrder = 12
+    Text = 'ComboBox4'
+    OnChange = SelectorDiagramTypChange
+  end
+  object EditSpeed: TSpinEdit
+    Left = 296
+    Top = 431
+    Width = 250
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 13
+    Value = 0
+    OnChange = EditSpeedChange
+  end
+  object BtnSort: TButton
+    Left = 568
+    Top = 486
+    Width = 250
+    Height = 43
+    Caption = 'Sort'
+    TabOrder = 14
+    OnClick = BtnSortClick
+  end
+  object SelectorArrayType: TComboBox
+    Left = 24
+    Top = 459
+    Width = 250
+    Height = 21
+    TabOrder = 15
+    Text = 'ComboBox5'
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 416
+    Top = 480
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 376
+    Top = 480
+  end
+  object Timer1: TTimer
+    Left = 336
+    Top = 480
+  end
+  object MainMenu1: TMainMenu
+    Left = 288
+    Top = 480
+    object File1: TMenuItem
+      Caption = 'File'
+      object ExportResults1: TMenuItem
+        Caption = 'Export Results'
+        OnClick = ExportResults1Click
+      end
+      object Export1: TMenuItem
+        Caption = 'Export Array'
+        OnClick = Export1Click
+      end
+      object ImportArray1: TMenuItem
+        Caption = 'Import Array'
+      end
+    end
+  end
+end

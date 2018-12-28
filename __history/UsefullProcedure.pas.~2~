@@ -1,0 +1,24 @@
+unit UsefullProcedure;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Samples.Spin, types, Math;
+
+implementation
+
+procedure fillListbox(var Listbox: TListBox; InputArray: TArrayOfInt);
+var
+  I: Integer;
+begin
+  Listbox.Clear;
+  with Listbox.Items do
+  begin
+    for I := 0 to length(InputArray) do
+      Add(IntToStr(InputArray[i]));
+  end;
+end;
+
+end.

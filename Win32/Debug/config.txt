@@ -1,0 +1,8 @@
+diagram-speed: 100
+maxnum: 50
+arraylength: 10
+algo1: BubbleSort
+algo2: Stoogesort
+algo3: GnomeSort
+diagramstyle: 0
+array-type: Random

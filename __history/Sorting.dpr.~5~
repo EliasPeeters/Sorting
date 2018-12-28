@@ -1,0 +1,20 @@
+program Sorting;
+
+uses
+  Vcl.Forms,
+  MainUnit in 'MainUnit.pas' {Form1},
+  UsefullProcedure in 'UsefullProcedure.pas',
+  types in 'types.pas',
+  DrawDiagram in 'DrawDiagram.pas',
+  FileLoaderUnit in 'FileLoaderUnit.pas',
+  BubbleSort in 'BubbleSort.pas',
+  Swoop in 'Swoop.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
